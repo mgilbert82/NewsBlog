@@ -1,40 +1,11 @@
 <?php
 
-class Post
+class Post extends Entity
 {
     //Attributs
-    private int $id;
     private string $title;
     private string $content;
     private string $image_url;
-
-    public function __construct(array $data)
-    {
-        $this->hydrate($data);
-    }
-
-    public function hydrate(array $data): void
-    {
-        foreach ($data as $key => $value) {
-            $method = 'set' . ucfirst($key);
-            if (method_exists($this, $method)) {
-                $this->$method($value);
-            }
-        }
-    }
-
-
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    public function setId($id)
-    {
-        $this->id = $id;
-
-        return $this;
-    }
 
     public function getTitle()
     {

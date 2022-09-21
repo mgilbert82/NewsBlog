@@ -14,10 +14,10 @@ $posts = $manager->getAll();
             <div class="card-body">
                 <h5 class="card-title"><?= $post->getTitle(); ?></h5>
                 <p class="card-text"><?= substr($post->getContent(), 0, 80); ?>...</p>
-                <a href="./Views/readPost.php?id=<?= $post->getId(); ?>" class="card-link"><i class="fa-solid fa-eye"></i> Lire +</a>
+                <a href="./readPost.php?id=<?= $post->getId(); ?>" class="card-link"><i class="fa-solid fa-eye"></i> Lire +</a>
                 <div class="container d-flex justify-content-between mt-3">
-                    <a href="./Views/updatePost.php?id=<?= $post->getId(); ?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="./Views/deletePost.php?id=<?= $post->getId(); ?>" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                    <a href="./updatePost.php?id=<?= $post->getId(); ?>" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="./deletePost.php?id=<?= $post->getId(); ?>" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
                 </div>
 
             </div>

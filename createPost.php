@@ -1,6 +1,6 @@
 <?php
 
-require("../header.php");
+require("./header.php");
 $manager = new PostManager();
 
 if ($_POST) {
